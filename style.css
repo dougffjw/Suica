@@ -1,0 +1,153 @@
+/* Garante que a página ocupe 100% da altura da tela */
+html, body {
+  height: 100%; /* Define a altura de 100% para o HTML e o body */
+  margin: 0; /* Remove margens padrão */
+  padding: 0; /* Remove espaçamentos padrão */
+  font-family: 'Poppins', Arial, sans-serif; /* Fonte principal */
+  background-color: #f9f9f9; /* Cor de fundo */
+  display: flex;
+  flex-direction: column; /* Organiza os elementos em coluna */
+}
+
+/* Estilo do Header */
+header {
+  background-image: linear-gradient(rgba(0, 0, 0, 0.2), rgba(0, 0, 0, 0.2)), 
+                    url('img/bandeiraHeader.png'); /* Gradiente + imagem */
+  background-size: cover;
+  background-position: center;
+  color: white; /* Cor do texto */
+  text-align: center;
+  padding: 20px;
+  min-height: 100px; /* Altura mínima do header */
+}
+
+header h1 {
+  font-size: 28px;
+  margin: 0;
+}
+
+nav a {
+  margin: 0 15px;
+  color: white;
+  text-decoration: none;
+  font-weight: bold;
+}
+
+nav a:hover {
+  text-decoration: underline;
+}
+
+/* Estilo do Main */
+main {
+  flex: 1; /* Faz o main ocupar o espaço restante entre o header e o footer */
+  display: flex;
+  justify-content: center;
+  align-items: flex-start;
+  flex-wrap: wrap; /* Permite que os elementos quebrem linha */
+  gap: 20px; /* Espaçamento entre os elementos */
+  padding: 20px;
+  background-color: #ffffff; /* Fundo branco */
+}
+
+main img {
+  max-width: 500px;
+  width: 100%;
+  height: auto;
+  border-radius: 8px;
+  box-shadow: 0 4px 10px rgba(0, 0, 0, 0.2); /* Sombra leve */
+}
+
+main section {
+  max-width: 500px;
+  text-align: justify;
+}
+
+main section h2 {
+  font-size: 20px;
+  color: #db2b2b; /* Cor do título */
+  margin-bottom: 10px;
+}
+
+main section p {
+  font-size: 14px;
+  color: #555;
+  line-height: 1.6;
+}
+
+/* Estilo do Footer */
+footer {
+  text-align: center;
+  padding: 10px;
+  background-color: #db2b2b; /* Cor de fundo do footer */
+  color: white; /* Cor do texto */
+  font-size: 12px;
+  border-top: 2px solid #db2b2b; /* Linha decorativa */
+}
+
+footer .social-links {
+  margin-top: 10px;
+}
+
+footer .social-links a {
+  color: white; /* Cor dos ícones */
+  margin: 0 10px;
+  font-size: 20px;
+  text-decoration: none;
+  transition: color 0.3s;
+}
+
+footer .social-links a:hover {
+  color: #f0f0f0; /* Cor mais clara ao passar o mouse */
+}
+
+/* Responsividade para telas menores */
+@media (max-width: 768px) {
+  header {
+    min-height: 80px; /* Reduz a altura do header */
+    padding: 10px;
+  }
+
+  header h1 {
+    font-size: 22px; /* Reduz o tamanho do título */
+  }
+
+  nav a {
+    font-size: 14px; /* Reduz o tamanho dos links */
+  }
+
+  main {
+    padding: 15px; /* Reduz o espaçamento interno */
+    gap: 15px; /* Reduz o espaço entre os elementos */
+  }
+
+  main img {
+    max-width: 100%; /* Faz com que as imagens ocupem toda a largura */
+  }
+
+  footer {
+    font-size: 10px; /* Reduz o tamanho da fonte */
+    padding: 5px; /* Reduz o espaçamento interno */
+  }
+
+  footer .social-links a {
+    font-size: 18px; /* Diminui o tamanho dos ícones */
+  }
+}
+
+@media (max-width: 480px) {
+  header h1 {
+    font-size: 18px; /* Reduz ainda mais o tamanho do título */
+  }
+
+  nav a {
+    font-size: 12px; /* Diminui o tamanho dos links */
+  }
+
+  main section h2 {
+    font-size: 18px; /* Reduz o tamanho do título das seções */
+  }
+
+  footer .social-links a {
+    font-size: 16px; /* Ajusta o tamanho dos ícones */
+  }
+}

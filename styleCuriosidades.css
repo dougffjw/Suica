@@ -1,0 +1,132 @@
+/* Garante que a página ocupe 100% da altura da tela */
+html, body {
+ height: 100%; /* Define a altura de 100% para o HTML e o body */
+ margin: 0; /* Remove margens padrão */
+ padding: 0; /* Remove espaçamentos padrão */
+ font-family: 'Poppins', Arial, sans-serif; /* Fonte principal */
+ background-color: #f9f9f9; /* Cor de fundo */
+ display: flex;
+ flex-direction: column; /* Organiza os elementos em coluna */
+}
+
+/* Estilo do Header */
+header {
+ background-color: #db2b2b; /* Cor de fundo do header */
+ color: white; /* Cor do texto */
+ text-align: center;
+ padding: 15px;
+}
+
+header h1 {
+ font-size: 24px;
+ margin: 0;
+}
+
+nav a {
+ margin: 0 10px;
+ color: white;
+ text-decoration: none;
+ font-weight: bold;
+}
+
+nav a:hover {
+ text-decoration: underline;
+}
+
+/* Estilo do Main */
+main {
+ flex: 1; /* Faz o main ocupar o espaço restante entre o header e o footer */
+ display: grid;
+ grid-template-columns: repeat(3, 1fr); /* Três colunas */
+ gap: 20px; /* Espaçamento entre os itens */
+ padding: 20px;
+}
+
+main section {
+ margin-top: 90px;
+ text-align: center;
+ background-color: #ffffff; /* Fundo branco para as seções */
+ border-radius: 8px;
+ height: 400px;
+ box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1); /* Sombra leve */
+ padding: 15px;
+}
+
+main section img {
+ width: 100%;
+ max-width: 500px; /* Aumenta a largura máxima */
+ height: 250px; /* Aumenta a altura */
+ object-fit: cover; /* Garante que a imagem seja cortada proporcionalmente */
+ border-radius: 8px; /* Mantém os cantos arredondados */
+ margin-bottom: 10px;
+}
+
+main section h2 {
+ font-size: 18px;
+ margin: 10px 0;
+ color: #db2b2b; /* Cor do título */
+}
+
+main section p {
+ text-align: justify;
+ font-size: 14px;
+ color: #555;
+ margin: 0 auto;
+}
+
+/* Estilo do Footer */
+footer {
+ text-align: center;
+ padding: 10px;
+ background-color: #db2b2b; /* Cor de fundo do footer */
+ color: white; /* Cor do texto */
+}
+
+footer .social-links {
+ margin-top: 10px;
+}
+
+footer .social-links a {
+ color: white; /* Cor dos ícones */
+ margin: 0 10px;
+ font-size: 20px;
+ text-decoration: none;
+ transition: color 0.3s;
+}
+
+footer .social-links a:hover {
+ color: #f0f0f0; /* Cor mais clara ao passar o mouse */
+}
+
+/* Responsividade para telas menores */
+@media (max-width: 768px) {
+ main {
+   grid-template-columns: repeat(2, 1fr); /* Duas colunas em telas menores */
+ }
+
+ header h1 {
+   font-size: 20px; /* Reduz o tamanho do título */
+ }
+
+ nav a {
+   font-size: 14px; /* Reduz o tamanho dos links */
+ }
+}
+
+@media (max-width: 480px) {
+ main {
+   grid-template-columns: 1fr; /* Uma coluna em telas muito pequenas */
+ }
+
+ header h1 {
+   font-size: 18px; /* Reduz ainda mais o tamanho do título */
+ }
+
+ nav a {
+   font-size: 12px; /* Reduz o tamanho dos links */
+ }
+
+ footer .social-links a {
+   font-size: 16px; /* Ajusta o tamanho dos ícones */
+ }
+}
